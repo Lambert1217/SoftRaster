@@ -1,0 +1,12 @@
+{
+  "name": "softraster",
+  "version-string": "1.0.0",
+  "dependencies": [
+    {
+      "name": "sdl3"
+    },
+    {
+      "name": "eigen3"
+    }
+  ]
+}

@@ -19,9 +19,9 @@ namespace SoftRaster
         SDL_Quit();
     }
 
-    void window::drawFramebuffer(const std::shared_ptr<framebuffer> &fb)
+    void window::drawFramebuffer(const framebuffer &fb)
     {
-        SDL_BlitSurface(fb->getColorBuffer(), nullptr, m_surface, nullptr);
+        SDL_BlitSurface(fb.getColorBuffer(), nullptr, m_surface, nullptr);
         SDL_UpdateWindowSurface(m_window);
     }
 } // namespace SoftRaster

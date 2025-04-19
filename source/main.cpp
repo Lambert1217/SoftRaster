@@ -5,8 +5,8 @@ using namespace SoftRaster;
 
 int main(int argc, char **argv)
 {
-    std::shared_ptr<window> m_window = std::make_shared<window>("SoftRaster", WIDTH, HEIGHT);
-    std::shared_ptr<framebuffer> m_framebuffer = std::make_shared<framebuffer>(WIDTH, HEIGHT);
+    window m_window("SoftRaster", WIDTH, HEIGHT);
+    framebuffer m_framebuffer(WIDTH, HEIGHT);
 
     // 程序循环
     bool is_running = true;
@@ -22,12 +22,12 @@ int main(int argc, char **argv)
             }
         }
         // 渲染逻辑
-        m_framebuffer->clearColor(GRAY);
+        m_framebuffer.clearColor(GRAY);
         // TODO: 实现渲染逻辑
-        m_framebuffer->setColor(100, 100, WHITE);
-        m_framebuffer->setColor(101, 100, WHITE);
-        m_framebuffer->setColor(100, 101, WHITE);
-        m_framebuffer->setColor(101, 101, WHITE);
-        m_window->drawFramebuffer(m_framebuffer);
+        m_framebuffer.setColor(100, 100, WHITE);
+        m_framebuffer.setColor(101, 100, WHITE);
+        m_framebuffer.setColor(100, 101, WHITE);
+        m_framebuffer.setColor(101, 101, WHITE);
+        m_window.drawFramebuffer(m_framebuffer);
     };
 }

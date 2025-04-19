@@ -21,7 +21,7 @@ namespace SoftRaster
         window(const std::string &title, uint32_t width, uint32_t height);
         ~window();
 
-        void drawFramebuffer(const std::shared_ptr<framebuffer> &fb);
+        void drawFramebuffer(const framebuffer &fb);
 
     private:
         std::string m_title;
