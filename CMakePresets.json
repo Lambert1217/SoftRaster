@@ -22,6 +22,12 @@
             "displayName": "Visual Studio Community 2022 Release - x86_amd64 - Debug",
             "configurePreset": "VS2022_x86_64",
             "configuration": "Debug"
+        },
+        {
+            "name": "VS2022_x86_64-release",
+            "displayName": "Visual Studio Community 2022 Release - x86_amd64 - release",
+            "configurePreset": "VS2022_x86_64",
+            "configuration": "Release"
         }
     ]
 }

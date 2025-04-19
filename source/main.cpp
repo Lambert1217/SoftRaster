@@ -1,9 +1,7 @@
 #include "window.h"
+#include "config.h"
 
 using namespace SoftRaster;
-
-constexpr uint32_t WIDTH = 800;
-constexpr uint32_t HEIGHT = 600;
 
 int main(int argc, char **argv)
 {
@@ -24,12 +22,12 @@ int main(int argc, char **argv)
             }
         }
         // 渲染逻辑
-        m_framebuffer->clearColor({50, 50, 50, 255});
+        m_framebuffer->clearColor(GRAY);
         // TODO: 实现渲染逻辑
-        m_framebuffer->setColor(100, 100, {255, 255, 255, 255});
-        m_framebuffer->setColor(101, 100, {255, 255, 255, 255});
-        m_framebuffer->setColor(100, 101, {255, 255, 255, 255});
-        m_framebuffer->setColor(101, 101, {255, 255, 255, 255});
+        m_framebuffer->setColor(100, 100, WHITE);
+        m_framebuffer->setColor(101, 100, WHITE);
+        m_framebuffer->setColor(100, 101, WHITE);
+        m_framebuffer->setColor(101, 101, WHITE);
         m_window->drawFramebuffer(m_framebuffer);
     };
 }

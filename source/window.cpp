@@ -6,11 +6,11 @@ namespace SoftRaster
         : m_title(title), m_width(width), m_height(height)
     {
         bool init_flag = SDL_Init(SDL_INIT_VIDEO);
-        assert(init_flag);
+        ASSERT(init_flag);
         m_window = SDL_CreateWindow(title.c_str(), width, height, 0);
-        assert(m_window);
+        ASSERT(m_window);
         m_surface = SDL_GetWindowSurface(m_window);
-        assert(m_surface);
+        ASSERT(m_surface);
     }
 
     window::~window()

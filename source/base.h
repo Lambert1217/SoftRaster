@@ -10,6 +10,13 @@
 
 #pragma once
 
+#include <SDL3/SDL.h>
+
+// 定义信息日志宏
+#define LOG(...) SDL_Log(__VA_ARGS__)
+// 定义断言
+#define ASSERT(condition) assert(condition)
+
 struct Color
 {
     uint8_t r;
