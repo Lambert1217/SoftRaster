@@ -1,5 +1,6 @@
 #include "application.h"
 #include "config.h"
+#include "timer.h"
 
 namespace SoftRaster
 {
@@ -21,7 +22,7 @@ namespace SoftRaster
             // 计算delta_time
             auto current_frame_time = std::chrono::high_resolution_clock::now();
             auto duration = std::chrono::duration_cast<std::chrono::microseconds>(current_frame_time - last_frame_time_);
-            float delta_time = duration.count() * 0.001f * 0.001f;
+            float delta_time = duration.count() * 0.001f; // 单位毫秒
             last_frame_time_ = current_frame_time;
             // 更新一帧
             tick(delta_time);
@@ -62,6 +63,7 @@ namespace SoftRaster
 
     void Application::tickRender(float timestep)
     {
+        PROFILE_SCOPE("render");
         // 渲染逻辑
         framebuffer_->clearColor(COLOR_GRAY);
         // TODO: 实现渲染逻辑
