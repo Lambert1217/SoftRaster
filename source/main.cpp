@@ -1,33 +1,8 @@
-#include "window.h"
+#include "application.h"
 #include "config.h"
-
-using namespace SoftRaster;
 
 int main(int argc, char **argv)
 {
-    window m_window("SoftRaster", WIDTH, HEIGHT);
-    framebuffer m_framebuffer(WIDTH, HEIGHT);
-
-    // 程序循环
-    bool is_running = true;
-    while (is_running)
-    {
-        // 事件处理
-        SDL_Event event;
-        while (SDL_PollEvent(&event))
-        {
-            if (event.type == SDL_EVENT_QUIT)
-            {
-                is_running = false;
-            }
-        }
-        // 渲染逻辑
-        m_framebuffer.clearColor(GRAY);
-        // TODO: 实现渲染逻辑
-        m_framebuffer.setColor(100, 100, WHITE);
-        m_framebuffer.setColor(101, 100, WHITE);
-        m_framebuffer.setColor(100, 101, WHITE);
-        m_framebuffer.setColor(101, 101, WHITE);
-        m_window.drawFramebuffer(m_framebuffer);
-    };
+    SoftRaster::Application app("SoftRaster", WINDOW_WIDTH, WINDOW_HEIGHT);
+    app.run();
 }

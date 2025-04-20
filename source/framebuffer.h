@@ -15,15 +15,15 @@
 
 namespace SoftRaster
 {
-    class framebuffer
+    class Framebuffer
     {
     public:
-        framebuffer(uint32_t width, uint32_t height);
-        ~framebuffer();
+        Framebuffer(uint32_t width, uint32_t height);
+        ~Framebuffer();
 
-        uint32_t getWidth() const { return m_width; }
+        uint32_t getWidth() const { return width_; }
 
-        uint32_t getHeight() const { return m_height; }
+        uint32_t getHeight() const { return height_; }
 
         void setColor(uint32_t x, uint32_t y, const Color &color);
 
@@ -37,13 +37,13 @@ namespace SoftRaster
 
         void clearDepth(float depth = 1.0f);
 
-        SDL_Surface *getColorBuffer() const { return m_colorbuffer; }
+        SDL_Surface *getColorBuffer() const { return colorbuffer_; }
 
     private:
-        uint32_t m_width, m_height;
-        uint32_t m_pixel_count;
+        uint32_t width_, height_;
+        uint32_t pixel_count_;
 
-        std::vector<float> m_depthbuffer;
-        SDL_Surface *m_colorbuffer;
+        std::vector<float> depthbuffer_;
+        SDL_Surface *colorbuffer_;
     };
 } // namespace SoftRaster

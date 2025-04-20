@@ -15,19 +15,19 @@
 
 namespace SoftRaster
 {
-    class window
+    class Window
     {
     public:
-        window(const std::string &title, uint32_t width, uint32_t height);
-        ~window();
+        Window(const std::string &title, uint32_t width, uint32_t height);
+        ~Window();
 
-        void drawFramebuffer(const framebuffer &fb);
+        void drawFramebuffer(const std::shared_ptr<Framebuffer> &framebuffer);
 
     private:
-        std::string m_title;
-        uint32_t m_width, m_height;
+        std::string title_;
+        uint32_t width_, height_;
 
-        SDL_Window *m_window;
-        SDL_Surface *m_surface;
+        SDL_Window *window_;
+        SDL_Surface *window_surface_;
     };
 } // namespace SoftRaster
