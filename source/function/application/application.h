@@ -10,8 +10,7 @@
 
 #pragma once
 
-#include "window.h"
-#include "framebuffer.h"
+#include "function/window/window.h"
 
 namespace SoftRaster
 {

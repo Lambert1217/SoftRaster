@@ -11,7 +11,7 @@
 #pragma once
 
 #include "SDL3/SDL.h"
-#include "framebuffer.h"
+#include "function/graphics/framebuffer.h"
 
 namespace SoftRaster
 {

@@ -1,6 +1,6 @@
 #include "application.h"
 #include "config.h"
-#include "timer.h"
+#include "core/utils/timer.h"
 
 namespace SoftRaster
 {

@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include "base.h"
+#include "core/base/base.h"
 #include "SDL3/SDL.h"
 
 namespace SoftRaster
